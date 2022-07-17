@@ -1,11 +1,12 @@
 <template>
-  <div class="details">
-    <h2>{{ route.params.id }}</h2>
+  <div class="details text-white flex flex-col items-center">
+    <h1 class="font-semibold text-2xl my-5 ml-3">{{ route.params.id }}</h1>
     <img
       :src="nasaImages[0].links[0].href"
       :alt="nasaImages[0].data[0].title"
+      class="max-w-4xl w-full"
     />
-    <p>{{ nasaImages[0].data[0].description }}</p>
+    <p class="max-w-4xl mt-5">{{ nasaImages[0].data[0].description }}</p>
   </div>
 </template>
 

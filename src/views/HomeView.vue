@@ -1,22 +1,33 @@
 <template>
-  <div class="home mt-5">
-    <div class="imageCard">
-      <router-link to="">hello</router-link>
-    </div>
+  <div class="home">
+    <header class="my-5 mx-1">
+      <h1
+        class="font-Nunito font-semibold text-6xl tracking-wider text-white uppercase pb-3 border-b border-white"
+      >
+        explore the universe
+      </h1>
+      <img
+        src="../assets/images/coverCarina.webp"
+        alt="Nebula Carina JWST"
+        class="w-full mt-2"
+      />
+    </header>
     <form @submit.prevent="SearchImages()" class="flex flex-col items-center">
       <input
-        class="border border-black rounded w-1/2 md:w-44 outline-none"
+        class="border border-white rounded w-1/2 sm:w-48 outline-none text-white pl-1"
         type="text"
-        placeholder="e.g. Saturn"
+        placeholder="e.g. moon"
         v-model="search"
       />
       <input
         type="submit"
         value="Search"
-        class="border border-black rounded mt-2 text-center uppercase"
+        class="border border-white px-2 rounded mt-2 text-center uppercase font-light text-white"
       />
     </form>
-    <CardComponent :nasaImages="nasaImages" />
+    <div class="flex flex-col justify-center items-center">
+      <CardComponent :nasaImages="nasaImages" />
+    </div>
   </div>
 </template>
 
